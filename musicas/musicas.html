@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="musicas.css">
+    <title>Login do meu coração</title>
+</head>
+
+<body>
+
+    <div class="container-login">
+
+        <div class="login">
+
+
+            <div class="imagens">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41.jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (1).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (2).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (3).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (4).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (5).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (6).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (7).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (8).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (9).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (10).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (11).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (12).jpeg" alt="" class="img">
+                <img src="../imagens/WhatsApp Image 2023-08-14 at 16.02.41 (13).jpeg" alt="" class="img">
+            </div>
+
+            <button class="mudar">Mudar</button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+</body>
+
+<script>
+   const botao = document.querySelector(".mudar")
+   const imagem = document.querySelectorAll(".img")
+
+   botao.addEventListener('click', ()=> {
+    var indice = Math.floor(Math.random() * 14)
+    botao.disabled = true
+    imagem[indice].classList.add("ativo")
+    imagem[indice].style.zIndex = "10"
+    setTimeout(() => {
+        botao.disabled = false
+        imagem[indice].style.zIndex = "4"
+    }, 2500);
+    setTimeout(() => {
+        imagem[indice].style.zIndex = "2"
+    }, 5000);
+    setTimeout(() => {
+        imagem[indice].classList.remove("ativo")
+    }, 7000);
+})
+</script>
+
+</html>
